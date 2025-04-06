@@ -1,12 +1,42 @@
 {
   "name": "wal-dev",
   "version": "0.0.1",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
+  "description": "wal-dev | npm package - Quick start toolkit for Walrus.",
   "license": "Apache-2.0",
-  "description": ""
+  "author": "nidz-the-fact",
+  "repository": "https://github.com/nidz-the-fact/wal-dev",
+  "homepage": "https://wal-dev.pages.dev",
+  "keywords": [
+    "walrus",
+    "wal-dev",
+    "cli",
+    "tool",
+    "sdk",
+    "npm",
+    "package",
+    "typescript",
+    "nodejs"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/bin.ts"
+  },
+  "main": "index.js",
+  "type": "commonjs",
+  "types": "dist/ts/index.d.ts",
+  "bin": {
+    "wal": "./dist/js/bin.js",
+    "wal-dev": "./dist/js/bin.js",
+    "wd": "./dist/js/bin.js",
+    "walrus": "./dist/js/bin.js"
+  },
+  "dependencies": {
+    "@mysten/sui": "^1.26.1",
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
 }
