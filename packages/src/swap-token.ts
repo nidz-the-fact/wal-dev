@@ -4,7 +4,7 @@ import { coinWithBalance, Transaction } from '@mysten/sui/transactions';
 import { MIST_PER_SUI, parseStructTag } from '@mysten/sui/utils';
 import { WalrusPackageConfig } from '@mysten/walrus';
 import { createSpinner } from 'nanospinner';
-import { cyan, green, red, bold, gray, magentaBright } from 'colorette';
+import { cyan, green, red, bold, gray, magentaBright, dim } from 'colorette';
 
 const TESTNET_WALRUS_PACKAGE_CONFIG = {
   systemObjectId: '0x6c2547cbbc38025cf3adac45f63cb0a8d12ecf777cdc75a4971612bf97fdf6af',
@@ -25,7 +25,8 @@ export async function swapToken(
     privateKey: string;
   }
 ) {
-  const spinner = createSpinner(`${cyan('Swapping')} ${amount} ${token === 'wal' ? 'SUI → WAL' : 'WAL → SUI'}...`);
+  const spinner = createSpinner(`${cyan('Swapping')} ${amount} ${token === 'wal' ? 'SUI → WAL' : 'WAL → SUI'}...`).start();
+  const startTime = performance.now();
   try {
     const suiClient = new SuiClient({
       url: getFullnodeUrl('testnet'),
@@ -34,8 +35,6 @@ export async function swapToken(
     const secretKey = Ed25519Keypair.fromSecretKey(options.privateKey);
     const tx = new Transaction();
     const exchangeId = TESTNET_WALRUS_PACKAGE_CONFIG.exchangeIds[0];
-
-    spinner.start();
 
     const exchange = await suiClient.getObject({
       id: exchangeId,
@@ -89,10 +88,12 @@ export async function swapToken(
     });
 
     spinner.success({ text: `${green('Swap completed successfully!')} ` });
+    const endTime = performance.now();
+    const periodTime = (endTime - startTime) / 1000;
 
     console.log(`${bold(gray('Swapped'))}: ${magentaBright(amount)} ${token === 'wal' ? 'SUI → WAL' : 'WAL → SUI'}`);
     console.log(`${bold(gray('Transaction'))}: ${cyan(`https://suiscan.xyz/testnet/tx/${digest}`)}`);
-
+    console.log(dim(`Period time: ${periodTime.toFixed(2)} seconds`));
   } catch (error) {
     spinner.error({ text: red(`Swap failed: ${(error as Error).message}`) });
   }

@@ -13,6 +13,7 @@ export async function getBalance(address: string, network: 'mainnet' | 'testnet'
     const client = new SuiClient({ url: getFullnodeUrl(network) });
 
     const spinner = createSpinner(`${cyan('Fetching balance')} from ${bold(network)} network...`).start();
+    const startTime = performance.now();
 
     try {
         let suiBalance;
@@ -36,6 +37,8 @@ export async function getBalance(address: string, network: 'mainnet' | 'testnet'
         const wal = walBalance ? Number(BigInt(walBalance.totalBalance)) / Number(MIST_PER_SUI) : 0;
 
         spinner.success({ text: green('Balance fetched successfully!') });
+        const endTime = performance.now();
+        const periodTime = (endTime - startTime) / 1000;
 
         console.log(`${bold(gray('Network'))}: ${dim(network)}`);
         console.log(`${bold(gray('Wallet'))}: ${dim(address)}\n`);
@@ -55,8 +58,10 @@ export async function getBalance(address: string, network: 'mainnet' | 'testnet'
             ['SUI', magentaBright(sui.toFixed(4))],
             ['WAL', magentaBright(wal.toFixed(4))]
         );
-
+        
         console.log(table.toString());
+
+        console.log(dim(`Period time: ${periodTime.toFixed(2)} seconds`));
 
     } catch (error) {
         spinner.error({ text: red(`Failed to fetch balance: ${(error as Error).message}`) });
