@@ -1,16 +1,10 @@
 # wal-dev
 
-## 0.0.6
+## 0.0.10
 
 ### Patch Changes
 
-- 46de9f3: 6
-
-## 0.0.5
-
-### Patch Changes
-
-- 🚀 wal-dev CLI v0.1 - Initial Release
+- 0a4f5ac: 🚀 wal-dev CLI v0.1 - Initial Release
   We’re excited to announce the first public release of wal-dev CLI version 0.1! 🎉
   This tool is designed to simplify and speed up the development workflow for Walrus.
 
