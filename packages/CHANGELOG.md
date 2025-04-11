@@ -1,5 +1,11 @@
 # wal-dev
 
+## 0.0.6
+
+### Patch Changes
+
+- 46de9f3: 6
+
 ## 0.0.5
 
 ### Patch Changes
