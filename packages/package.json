@@ -1,6 +1,6 @@
 {
   "name": "wal-dev",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "wal-dev | npm package - Quick start toolkit for Walrus.",
   "license": "Apache-2.0",
   "author": "nidz-the-fact",
@@ -21,7 +21,6 @@
     "build": "tsc",
     "start": "ts-node src/bin.ts"
   },
-  "main": "index.js",
   "type": "commonjs",
   "types": "dist/ts/index.d.ts",
   "bin": {
@@ -33,15 +32,16 @@
   "dependencies": {
     "@mysten/sui": "^1.26.1",
     "@mysten/walrus": "^0.0.13",
-    "commander": "^12.1.0"
-  },
-  "devDependencies": {
-    "@types/node": "^22.14.0",
     "cli-table3": "^0.6.5",
     "colorette": "^2.0.20",
+    "commander": "^12.1.0",
     "nanospinner": "^1.2.2",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.8.3",
     "undici": "^7.8.0"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.28.1",
+    "@types/node": "^22.14.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   }
 }
