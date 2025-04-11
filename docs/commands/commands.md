@@ -47,6 +47,11 @@ Swap SUI <-> WAL tokens at a 1:1 rate (testnet only).
 ```bash
 wal get 
 ```
+### `upload`
+Upload file with "Path:/to/x.x" or "text" on Walrus.
+```bash
+wal upload 
+```
 
 ## Syntax
 Additional options in each desired use.
@@ -58,6 +63,7 @@ Additional options in each desired use.
 |-----------------|-----------------------------------------------------------|
 | `<address>` | The wallet address to check |
 | `<amount>` | Amount to swap (e.g., 0.1) |
+| `<data>` | File "Path:/to/x.x" or "text" to upload |
 | `-pk, --privateKey` `<key>` | Private key sign the transaction |
 | `-n, --network` `<network>` | Specify network mainnet or testnet |
 | `-t, --token` `<token>` | Token to receive: wal or sui |
@@ -69,9 +75,11 @@ Explain the meaning of each command.
 | `wal`       | Main command used to run the `wal-dev` CLI tool |
 | `balance`   | Check the SUI and WAL token balance of an address |
 | `get`       | Swap SUI <-> WAL tokens at a 1:1 rate (testnet only) |
+| `uoload`    | Upload file with "Path:/to/x.x" or "text" on Walrus |
 
 ## Note
 Help remember more.
 - ⚠️ <span style="color:red">Never reveal your **Private Key** can control the wallet and all transactions.</span>
 - 🔧 `wal-dev` is a CLI tool for working with **Walrus Protocol** on **SUI Blockchain**.
 - 🛠️ If there is an error or want to see all commands, use `wal <Keyword>`.
+- 📁 Using `wal upload` supports both files ("Path:/to/x.x") and text ("Text").
