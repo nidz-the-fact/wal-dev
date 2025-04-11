@@ -41,6 +41,7 @@
     "colorette": "^2.0.20",
     "nanospinner": "^1.2.2",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "undici": "^7.8.0"
   }
 }
