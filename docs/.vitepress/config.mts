@@ -31,7 +31,7 @@ export default defineConfig({
         items: [
           {
             text: 'Changelog',
-            link: 'https://github.com/nidz-the-fact/wal-dev/tree/main/docs/CHANGELOG.md',
+            link: 'https://github.com/nidz-the-fact/wal-dev/blob/main/packages/CHANGELOG.md',
           },
           {
             text: 'Issuessions',
