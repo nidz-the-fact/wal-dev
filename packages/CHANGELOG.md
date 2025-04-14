@@ -1,5 +1,11 @@
 # wal-dev
 
+## 0.1.1
+
+### Patch Changes
+
+- v0.1.1
+
 ## 0.1.0
 
 ### Patch Changes
