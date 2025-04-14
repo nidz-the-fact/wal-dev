@@ -5,6 +5,7 @@ import { Command, Option } from 'commander';
 import { getBalance } from './get-balance';
 import { swapToken } from './swap-token';
 import { writeBlob } from './write-blob';
+import { showMetadata } from './read-blob';
 import { dim, greenBright, reset, yellowBright } from 'colorette';
 
 const program = new Command();
@@ -124,6 +125,21 @@ program
       }
     } catch (error) {
       console.error('Error uploading:', (error as Error).message);
+    }
+  });
+
+program
+  .command('read')
+  .description('Preview data from Walrus using blob ID')
+  .showHelpAfterError(true)
+  .helpOption(false)
+  .requiredOption('-n, --network <network>', 'Specify network mainnet or testnet')
+  .argument('<blobId>', 'The blobId of the file to read')
+  .action(async (blobId: string, options: { network: 'mainnet' | 'testnet' }) => {
+    try {
+      await showMetadata(blobId, options.network);
+    } catch (error) {
+      console.error('Error reading:', (error as Error).message);
     }
   });
 

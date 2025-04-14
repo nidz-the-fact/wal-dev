@@ -4,7 +4,9 @@
 
 ### Patch Changes
 
-- v0.1.1
+- Preview data from Walrus using blob ID : 
+  `wal read` - A unique ID for data (file or text) uploaded to Walrus Protocol.
+  ![img](../docs/assets/wal-read.png)
 
 ## 0.1.0
 

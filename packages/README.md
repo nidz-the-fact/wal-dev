@@ -71,7 +71,7 @@ or
 bun add -g wal-dev
 ```
 
-## Donate
+## Donate (suiAddres)
 ```suiAddress
 0x308b05d9fb305a8e995ab9c89be0f3cada26d8db18ea76592c283921f772af71
 ```

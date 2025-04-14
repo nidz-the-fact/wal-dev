@@ -10,7 +10,7 @@ It's not just developers who can get involved, you can too by viewing and intera
 - and
 - [Share your Talk about us and recommend good things](https://wal-dev.pages.dev/)
 
-or Donate
+or Donate (suiAddres)
 ```suiAddress
 0x308b05d9fb305a8e995ab9c89be0f3cada26d8db18ea76592c283921f772af71
 ```

@@ -1,6 +1,8 @@
+# Commands
+
+<br/>
+
 # wal-dev <Badge type="tip" text="CLI Command Development Tools" />
-
-
 `wal` is a command-line interface (CLI) tool designed to simplify testing and interaction with the Walrus. This CLI tool provides a fast and easy way to interact with the Sui blockchain, allowing you to perform tasks such as swap tokens, blob on walrus, and interacting with smart contracts.
 
 ## Preview
@@ -63,7 +65,7 @@ Additional options in each desired use.
 |-----------------|-----------------------------------------------------------|
 | `<address>` | The wallet address to check |
 | `<amount>` | Amount to swap (e.g., 0.1) |
-| `<data>` | File "Path:/to/x.x" or "text" to upload |
+| `<blobID>` | File "Path:/to/x.x" or "text" to upload |
 | `-pk, --privateKey` `<key>` | Private key sign the transaction |
 | `-n, --network` `<network>` | Specify network mainnet or testnet |
 | `-t, --token` `<token>` | Token to receive: wal or sui |
@@ -82,4 +84,4 @@ Help remember more.
 - ⚠️ <span style="color:red">Never reveal your **Private Key** can control the wallet and all transactions.</span>
 - 🔧 `wal-dev` is a CLI tool for working with **Walrus Protocol** on **SUI Blockchain**.
 - 🛠️ If there is an error or want to see all commands, use `wal <Keyword>`.
-- 📁 Using `wal upload` supports both files ("Path:/to/x.x") and text ("Text").
+- 🔗 `blobId` obtained from `upload` can be used in `read`.

@@ -113,7 +113,7 @@ const members = [
 </script>
 
 <VPTeamPage>
-  <VPTeamPageTitle style="margin-top: -160px;">
+  <VPTeamPageTitle style="margin-top: -120px;">
     <template #title>
       Developer
     </template>

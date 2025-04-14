@@ -81,6 +81,10 @@ export default defineConfig({
                 text: 'wal upload',
                 link: '/commands/wal-upload',
               },
+              {
+                text: 'wal read',
+                link: '/commands/wal-read',
+              },
             ],
           },
 
