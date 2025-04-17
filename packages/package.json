@@ -1,6 +1,6 @@
 {
   "name": "wal-dev",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "wal-dev | npm package - Quick start toolkit for Walrus.",
   "license": "Apache-2.0",
   "author": "nidz-the-fact",
@@ -30,11 +30,13 @@
     "walrus": "./dist/js/bin.js"
   },
   "dependencies": {
+    "@hono/node-server": "^1.14.1",
     "@mysten/sui": "^1.26.1",
     "@mysten/walrus": "^0.0.13",
     "cli-table3": "^0.6.5",
     "colorette": "^2.0.20",
     "commander": "^12.1.0",
+    "hono": "^4.7.7",
     "nanospinner": "^1.2.2",
     "undici": "^7.8.0"
   },

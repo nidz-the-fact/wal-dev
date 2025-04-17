@@ -1,10 +1,16 @@
 # wal-dev
 
+## 0.1.2
+
+### Patch Changes
+
+- 0.1.2
+
 ## 0.1.1
 
 ### Patch Changes
 
-- Preview data from Walrus using blob ID : 
+- Preview data from Walrus using blob ID :
   `wal read` - A unique ID for data (file or text) uploaded to Walrus Protocol.
   ![img](../docs/assets/wal-read.png)
 
