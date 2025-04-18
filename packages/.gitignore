@@ -43,6 +43,6 @@ next-env.d.ts
 dist
 out
 
-src/
-tsconfig.json
-.changeset/
+# src/
+# tsconfig.json
+# .changeset/
