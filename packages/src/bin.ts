@@ -6,6 +6,7 @@ import { getBalance } from './get-balance';
 import { swapToken } from './swap-token';
 import { writeBlob } from './write-blob';
 import { showMetadata } from './read-blob';
+import { startServer } from './server-mock';
 import { dim, greenBright, reset, yellowBright } from 'colorette';
 
 const program = new Command();
@@ -140,6 +141,17 @@ program
       await showMetadata(blobId, options.network);
     } catch (error) {
       console.error('Error reading:', (error as Error).message);
+    }
+  });
+
+program
+  .command('start')
+  .description('Start a local:3000 Walrus server for testing')
+  .action(() => {
+    try {
+      startServer();
+    } catch (error) {
+      console.error('Error servering:', (error as Error).message);
     }
   });
 

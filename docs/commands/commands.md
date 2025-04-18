@@ -65,7 +65,8 @@ Additional options in each desired use.
 |-----------------|-----------------------------------------------------------|
 | `<address>` | The wallet address to check |
 | `<amount>` | Amount to swap (e.g., 0.1) |
-| `<blobID>` | File "Path:/to/x.x" or "text" to upload |
+| `<data>` | File "Path:/to/x.x" or "text" to upload |
+| `<blobID>` | The blobId of the file to read |
 | `-pk, --privateKey` `<key>` | Private key sign the transaction |
 | `-n, --network` `<network>` | Specify network mainnet or testnet |
 | `-t, --token` `<token>` | Token to receive: wal or sui |
@@ -78,10 +79,13 @@ Explain the meaning of each command.
 | `balance`   | Check the SUI and WAL token balance of an address |
 | `get`       | Swap SUI <-> WAL tokens at a 1:1 rate (testnet only) |
 | `uoload`    | Upload file with "Path:/to/x.x" or "text" on Walrus |
+| `read`      | Preview data from Walrus using blob ID |
+| `start`      | Start a local:3000 Walrus server for testing |
 
 ## Note
 Help remember more.
 - ⚠️ <span style="color:red">Never reveal your **Private Key** can control the wallet and all transactions.</span>
 - 🔧 `wal-dev` is a CLI tool for working with **Walrus Protocol** on **SUI Blockchain**.
 - 🛠️ If there is an error or want to see all commands, use `wal <Keyword>`.
+- 📁 Using `wal upload` supports both files ("Path:/to/x.x") and text ("Text").
 - 🔗 `blobId` obtained from `upload` can be used in `read`.

@@ -85,6 +85,10 @@ export default defineConfig({
                 text: 'wal read',
                 link: '/commands/wal-read',
               },
+              {
+                text: 'wal start',
+                link: '/commands/wal-start',
+              },
             ],
           },
 

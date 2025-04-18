@@ -1,16 +1,12 @@
 # wal-dev
 
-## 0.1.3
-
-### Patch Changes
-
-- 0.1.2
-
 ## 0.1.2
 
 ### Patch Changes
 
-- 0.1.2
+- Start a local:3000 Walrus server for testing :
+  `wal start`
+  ![img](../docs/assets/wal-start.png)
 
 ## 0.1.1
 
