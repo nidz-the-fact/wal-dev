@@ -89,6 +89,10 @@ export default defineConfig({
                 text: 'wal start',
                 link: '/commands/wal-start',
               },
+              {
+                text: 'wal download',
+                link: '/commands/wal-download',
+              },
             ],
           },
 

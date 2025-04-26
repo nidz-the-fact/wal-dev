@@ -2,7 +2,7 @@
 
 ###
 
-## Command <Badge type="info" text="wal balance" />
+## Command <Badge type="info" text="wal start" />
 ```bash [npm]
 wal start
 ```

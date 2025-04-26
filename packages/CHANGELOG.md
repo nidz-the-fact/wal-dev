@@ -4,7 +4,9 @@
 
 ### Patch Changes
 
-- b006a27: update
+- b006a27: Download file from Walrus using blob ID :
+  `wal download`
+  ![img](../docs/assets/wal-download.png)
 
 ## 0.1.2
 

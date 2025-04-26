@@ -6,7 +6,7 @@
 `wal` is a command-line interface (CLI) tool designed to simplify testing and interaction with the Walrus. This CLI tool provides a fast and easy way to interact with the Sui blockchain, allowing you to perform tasks such as swap tokens, blob on walrus, and interacting with smart contracts.
 
 ## Preview
-Demo only using `wal-dev` (wal) command. **Please do not publish Privatekey publicly**.
+Demo only using `wal-dev` (wal) command. **Please do not show Privatekey**.
 <div align="center">
   <video width="800" autoplay loop muted>
     <source src="../assets/test-wal.mp4" type="video/mp4">
@@ -54,6 +54,21 @@ Upload file with "Path:/to/x.x" or "text" on Walrus.
 ```bash
 wal upload 
 ```
+### `read`
+Preview data from Walrus using blob ID.
+```bash
+wal read 
+```
+### `start`
+Start a local:3000 Walrus server for testing.
+```bash
+wal start 
+```
+### `download`
+Download file from Walrus using blob ID.
+```bash
+wal download 
+```
 
 ## Syntax
 Additional options in each desired use.
@@ -80,7 +95,8 @@ Explain the meaning of each command.
 | `get`       | Swap SUI <-> WAL tokens at a 1:1 rate (testnet only) |
 | `uoload`    | Upload file with "Path:/to/x.x" or "text" on Walrus |
 | `read`      | Preview data from Walrus using blob ID |
-| `start`      | Start a local:3000 Walrus server for testing |
+| `start`     | Start a local:3000 Walrus server for testing |
+| `download`  | Download file from Walrus using blob ID |
 
 ## Note
 Help remember more.
@@ -88,4 +104,3 @@ Help remember more.
 - 🔧 `wal-dev` is a CLI tool for working with **Walrus Protocol** on **SUI Blockchain**.
 - 🛠️ If there is an error or want to see all commands, use `wal <Keyword>`.
 - 📁 Using `wal upload` supports both files ("Path:/to/x.x") and text ("Text").
-- 🔗 `blobId` obtained from `upload` can be used in `read`.

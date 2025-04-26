@@ -7,6 +7,7 @@ import { swapToken } from './swap-token';
 import { writeBlob } from './write-blob';
 import { showMetadata } from './read-blob';
 import { startServer } from './server-mock';
+import { downloadBlob } from './download-blob';
 import { dim, greenBright, reset, yellowBright } from 'colorette';
 
 const program = new Command();
@@ -152,6 +153,21 @@ program
       startServer();
     } catch (error) {
       console.error('Error servering:', (error as Error).message);
+    }
+  });
+
+program
+  .command('download')
+  .description('Download file from Walrus using blob ID')
+  .showHelpAfterError(true)
+  .helpOption(false)
+  .requiredOption('-n, --network <network>', 'Specify network mainnet or testnet')
+  .argument('<blobId>', 'The blobId of the file to download')
+  .action(async (blobId: string, options: { network: 'mainnet' | 'testnet' }) => {
+    try {
+      await downloadBlob(blobId, options.network);
+    } catch (error) {
+      console.error('Error saving:', (error as Error).message);
     }
   });
 
