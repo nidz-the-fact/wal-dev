@@ -1,5 +1,11 @@
 # docs
 
+## 0.1.3
+
+### Patch Changes
+
+- 7e7e85d: for v0.1.3
+
 ## 0.1.2
 
 ### Patch Changes
